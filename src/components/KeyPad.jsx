@@ -14,12 +14,9 @@ const KeyPad = (props) => {
     if (data == "RESET") {
       return dispatch(calculate(""));
     } else if (data == "=") {
-      const test = "56-43+3434x454/54";
-      // const splitedNumber = test.split("\\+|\\-|\\*|\\/");
-      const splitedNumber = test.split(/[x^+-]/);
-      console.log(splitedNumber);
-      // dispatch(calculate(eval(number)));
+      dispatch(calculate(eval(number)));
     } else {
+
       return dispatch(calculate(number + data));
     }
   };
@@ -135,7 +132,7 @@ const KeyPad = (props) => {
         color="bg-color5"
         textColor="text-color7"
         handleNumber={handleNo}
-        name="x"
+        name="*"
       />
       <SmallKey
         className="col-span-2 bg-color2 "
