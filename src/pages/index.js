@@ -10,14 +10,12 @@ export default function Home() {
   const theme = useSelector((state) => state.styles.value.theme);
 
   return (
-    <Fragment>
-      <div
-        className={`sm:w-full min-h-screen p-4 flex flex-col ${theme} bg-main_bg`}
-      >
+    <div className={` ${theme} flex justify-center bg-main_bg`}>
+      <div className={`min-h-screen p-4 flex flex-col   max-w-lg `}>
         <Header theme={theme} />
         <Screen />
         <KeyPad theme={theme} />
       </div>
-    </Fragment>
+    </div>
   );
 }

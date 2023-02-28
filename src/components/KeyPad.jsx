@@ -145,7 +145,6 @@ const KeyPad = (props) => {
       <SmallKey
         className="col-span-2 bg-color4 text-white"
         color="bg-color3"
-        hoverColor="bg-"
         textColor={`${
           props.theme == "theme-purple" ? "text-black" : "text-white"
         }`}

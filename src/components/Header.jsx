@@ -2,7 +2,6 @@ import React from "react";
 import Toggle from "./Buttons/Toggle";
 
 const Header = (props) => {
-  console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%");
   return (
     <div className="  h-20 flex flex-row   items-center  ">
       <h2
