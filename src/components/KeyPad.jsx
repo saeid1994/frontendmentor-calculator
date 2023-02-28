@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import SmallKey from "./Buttons/SmallKey";
 import { calculate } from "./../../redux/reducers/calculatorSlice";
 
 const KeyPad = (props) => {
   const dispatch = useDispatch();
-  const number = useSelector((state) => state.calculator.value.no);
+  let number = useSelector((state) => state.calculator.value.no);
 
   const handleNo = (data) => {
     if (number == "0") {
@@ -15,8 +14,9 @@ const KeyPad = (props) => {
       return dispatch(calculate(""));
     } else if (data == "=") {
       dispatch(calculate(eval(number)));
+    } else if (data == "DEL") {
+      dispatch(calculate(number.toString().slice(0, -1)));
     } else {
-
       return dispatch(calculate(number + data));
     }
   };
@@ -48,6 +48,7 @@ const KeyPad = (props) => {
         className="bg-color2"
         color="bg-color1"
         name="DEL"
+        handleNumber={handleNo}
         textColor="text-white"
       />
       <SmallKey
