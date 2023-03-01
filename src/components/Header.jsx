@@ -20,7 +20,7 @@ const Header = (props) => {
         >
           THEME
         </p>
-        <Toggle />
+        <Toggle theme={props.theme} />
       </div>
     </div>
   );
