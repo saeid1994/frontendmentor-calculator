@@ -1,6 +1,4 @@
 import { useSelector } from "react-redux";
-import { Fragment, useState } from "react";
-// import head component
 
 import Header from "@/components/Header";
 import Screen from "@/components/Screen";

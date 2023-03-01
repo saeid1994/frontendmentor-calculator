@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 const SmallKey = (props) => {
   const [fontSize, setFontSize] = useState("text-3xl");
 
+  //I know below code is not clean
+
   const handleBigKeys = () => {
     if (props.name === "RESET") {
       setFontSize("text-[19px]");
@@ -23,7 +25,7 @@ const SmallKey = (props) => {
     <div className={`rounded-lg ${props.className} duration-150 group`}>
       <div
         onClick={() => props.handleNumber(props.name)}
-        className={`h-[60px] duration-150 ${props.color} rounded-lg  group-hover:brightness-150 flex justify-center relative `}
+        className={`h-[60px] duration-150 ${props.color} rounded-lg  group-hover:brightness-150 flex justify-center relative cursor-pointer`}
       >
         <p
           className={`${props.textColor} ${fontSize} font-custom absolute top-1/2 -translate-y-[43%] `}
